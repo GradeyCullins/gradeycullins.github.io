@@ -8,15 +8,15 @@ reset();
 for (var i = 0; i < squares.length; i++) {
 	squares[i].addEventListener('click', function() {
 		if (this.style.background == target) {
-			document.querySelector('#output').textContent = "Yep";
+			document.querySelector('#head').style.background = target;
 			for (var i = 0; i < squares.length; i++) {
 				squares[i].style.visibility = 'visible';
 				squares[i].style.background = this.style.background;
 			}
 			document.querySelector('#reset').textContent = 'Play Again';
 		} else {
-			document.querySelector('#output').textContent = "Nope";
-			this.style.visibility = 'hidden';
+			document.querySelector('#reset').textContent = 'Incorrect';
+			this.style.background = '#232323';
 		}
 	});
 	squares[i].style.background = colors[i];
@@ -27,7 +27,8 @@ document.querySelector('#reset').addEventListener('click', function() {
 });
 
 function reset() {
-	document.querySelector('#output').innerHTML = '&nbsp';
+	document.querySelector('#reset').textContent = 'New Colors';
+	document.querySelector('#head').style.background = '#232323';
 	currIndex = Math.floor(Math.random() * 5);
 	colors = new Array();
 	for (var i = 0; i < 5; i++) {
@@ -40,3 +41,9 @@ function reset() {
 		squares[i].style.background = colors[i];
 	}
 }
+
+document.onkeydown = function(e) {
+    if (e.keyCode == 13) {
+    	reset();
+    }
+};
