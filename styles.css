@@ -1,11 +1,29 @@
 body {
 	background-color: #232323;
+	margin: 0;
 }
 
 #container {
 	width: 50%;
 	max-width: 600px;
 	margin: 0 auto;
+}
+
+#bar {
+	margin-bottom: 20px;
+	width: 100%;
+	
+	background-color: white;
+	padding-left: 30%;
+	padding-top: 10px;
+}
+
+#reset {
+	text-decoration: none;
+}
+
+#output {
+
 }
 
 .square {
@@ -21,3 +39,25 @@ h1, h2 {
 	text-align: center;
 	color: white;
 }
+
+a:hover {
+	background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
