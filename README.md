@@ -1,4 +1,4 @@
-# greybonez.github.io
+# gradeycullins.github.io
 simple html/css/js rgb color game
 
-go to http://greybonez.github.io/ to play
+go to http://gradeycullins.github.io/ to play
