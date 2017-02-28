@@ -7,7 +7,7 @@ reset();
 // event listener for tiles and sum other stuff big boi
 for (var i = 0; i < squares.length; i++) {
 	squares[i].addEventListener('click', function() {
-		if (this.style.background == target) {
+		if (this.style.background.indexOf(target) != -1) {
 			document.querySelector('#head').style.background = target;
 			for (var i = 0; i < squares.length; i++) {
 				squares[i].style.visibility = 'visible';
